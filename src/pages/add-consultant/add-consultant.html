@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>طلب الانضمام كمستشار</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-row class="input-row">
+    <ion-col no-padding col-12>
+      <div class="subject">الاسم</div>
+      <ion-input class="my-input" [(ngModel)]="data.name"></ion-input>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <div class="subject">البريد الاكتروني</div>
+      <ion-input class="my-input" [(ngModel)]="data.email"></ion-input>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <div class="subject">رقم الجوال</div>
+      <ion-input class="my-input" [(ngModel)]="data.mobile"></ion-input>
+    </ion-col>
+
+
+    <ion-col no-padding col-12>
+      <div class="subject">الدرجة العلمية</div>
+      <ion-input class="my-input" [(ngModel)]="data.degree"></ion-input>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <div class="subject">نبذة عن</div>
+      <ion-textarea [(ngModel)]="data.about" class="my-textarea" rows='7'></ion-textarea>
+    </ion-col>
+
+
+
+    <ion-col no-padding col-12>
+      <button ion-button full block class="send-btn" (click)="send()">
+        <span *ngIf="!waiting" class="enter">ارسال طلب</span>
+        <ion-spinner name="ios-small" *ngIf="waiting" color="light"></ion-spinner>
+      </button>
+    </ion-col>
+
+  </ion-row>
+</ion-content>

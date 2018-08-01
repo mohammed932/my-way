@@ -1,14 +1,88 @@
 <ion-header>
+
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <img src="assets/imgs/logo_home.png" class="logo">
     </ion-title>
+    <!-- <img src="assets/imgs/login.svg" class="login-img"> -->
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<ion-content class="my-content">
+
+  <ion-grid class="icons-grid">
+    <ion-row class="icons-row" (click)="openPage('AppIdeaPage')">
+      <ion-col>
+        <div class="img-wrapper">
+          <img src="assets/imgs/idea.png" class="icon-img">
+        </div>
+        <div class="txt">فكرة التطبيق</div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="icons-row">
+
+
+      <ion-col col-6 (click)="openPage('ConsultingPage')">
+        <div class="img-wrapper">
+          <img src="assets/imgs/consulting.png" class="icon-img">
+        </div>
+        <div class="txt">استشارات</div>
+      </ion-col>
+
+      <ion-col col-6 (click)="openPage('DifficultiesGuidePage')">
+        <div class="img-wrapper">
+          <img src="assets/imgs/guide.png" class="icon-img difficult">
+        </div>
+        <div class="txt">دليل صعوبات التعلم</div>
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row class="icons-row">
+
+      <ion-col col-6>
+        <div class="img-wrapper">
+          <img src="assets/imgs/ads.png" class="icon-img ads">
+        </div>
+        <div class="txt">لقاءات التربية الخاصة</div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="img-wrapper">
+          <img src="assets/imgs/schools.png" class="icon-img">
+        </div>
+        <div class="txt">
+          المدارس المشاركة
+          <span class="dim">(قريباً) </span>
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="icons-row" (click)="openPage('AdsPage')">
+
+      <ion-col (click)="openPage('TeamWorkPage')">
+        <div class="img-wrapper">
+          <img src="assets/imgs/team.png" class="icon-img team">
+        </div>
+        <div class="txt">فريق العمل</div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <div class="social-icon-wrapper">
+        <img src="assets/imgs/twitter.svg" class="social-icon" (click)="openUrl('https://twitter.com')">
+        <img src="assets/imgs/instagram.svg" class="social-icon" (click)="openUrl('https://www.instagram.com')">
+        <img src="assets/imgs/snapchat.svg" class="social-icon" (click)="openUrl('https://www.snapchat.com/add')">
+        <img src="assets/imgs/envelope-white.svg" class="social-icon" (click)="openEmail()">
+      </div>
+    </ion-row>
+
+  </ion-grid>
+
 </ion-content>

@@ -1,3 +1,60 @@
 page-home {
+    
+    .icons-grid{
+        margin-top: 5rem;
+        .icons-row{
+            margin-top: 1rem;
+        }
+        .img-wrapper{
+            background: #75b6d9;
+            width: 75px;
+            margin: auto;
+            height: 75px;
+            border-radius: 100%;
+            .icon-img{
+                margin: auto;
+                display: block;
+                width: 30px;
+                position: relative;
+                top: 24%;
+            }
+            .difficult ,.team{
+                top: 34%;
+            }
+            .ads{
+                top: 30%;  
+            }
+        }
+    
+        .txt{
+            text-align: center;
+            margin-top: 5px;
+            color: white;
+            font-size: 14px;
+        }
+    }
 
+   
+    .logo{
+        width: 32px;
+        position: relative;
+        top: 5px;
+    }
+    .login-img{
+        width: 30px;
+        float: right;
+        margin-right: 15px;
+    }
+    .dim{
+        color: #afafaf !important;
+    }
+    .social-icon-wrapper{
+        margin: auto;
+        margin-top: 10px;
+        .social-icon{
+            width: 30px;
+            margin: 5px;
+        }
+    }
+    
 }

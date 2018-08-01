@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>دليل صعوبات التعلم</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="my-content">
+
+  <loading-spinner *ngIf="displayLoading"></loading-spinner>
+  <div *ngIf="!displayLoading">
+    <ion-item (click)="openPage(guide)" *ngFor="let guide of Guides">
+      <div class="diff-date">{{generalService.formatDate(guide.created_at)}}</div>
+      <div class="img-wrapper">
+        <img src="assets/imgs/profile.svg" class="icon-img">
+        <div class="item-title">{{guide.title}}</div>
+        <div class="postion">{{guide.writer}}</div>
+      </div>
+      <img src="assets/imgs/back.svg" class="back-img">
+    </ion-item>
+  </div>
+
+</ion-content>

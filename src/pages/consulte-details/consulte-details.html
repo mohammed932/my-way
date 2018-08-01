@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>إستشارات</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row>
+    <div class="doctor-wrapper">
+      <div class="doctor-name">{{consultDetails.name}}</div>
+      <div class="position">{{consultDetails.degree}}</div>
+    </div>
+  </ion-row>
+
+
+  <ion-row class="input-row">
+    <ion-col no-padding col-12>
+      <div class="subject">الاسم</div>
+      <ion-input [(ngModel)]="data.name" class="my-input" type="text"></ion-input>
+    </ion-col>
+    <ion-col no-padding col-12>
+      <div class="subject">البريد الالكتروني</div>
+      <ion-input [(ngModel)]="data.email" class="my-input" type="text"></ion-input>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <div class="subject">الموضوع</div>
+      <ion-input [(ngModel)]="data.subject" class="my-input" type="text"></ion-input>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <div class="subject">الرسالة</div>
+      <ion-textarea [(ngModel)]="data.message" class="my-textarea" rows='7'></ion-textarea>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <button ion-button full block class="attach-btn" (click)="uploadPic()">
+        <img src="assets/imgs/clip.svg" class="attach-img">
+        <div class="attach-txt">مرفقات</div>
+      </button>
+    </ion-col>
+
+    <ion-col no-padding col-12>
+      <button ion-button full block class="send-btn" (click)="send()">
+        <span *ngIf="!waiting" class="enter">ارسال</span>
+        <ion-spinner name="ios-small" *ngIf="waiting" color="light"></ion-spinner>
+      </button>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

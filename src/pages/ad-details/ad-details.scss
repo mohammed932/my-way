@@ -1,0 +1,31 @@
+page-ad-details {
+    .toolbar-background-ios{
+        background: #87cdf2 !important;
+    }
+    .toolbar-title-ios{
+        color: #13344f !important;
+    }
+
+    .ad-img{
+        width: 100%;
+        background: #87cdf2;
+        height: 230px;
+        border-radius: 5px;
+    }
+    .ad-title{
+        text-align: center;
+        color: white;
+        margin-top: 1rem;
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .ad-type{
+        text-align: center;
+        color: #86cef2;
+        line-height: 1;
+    }
+    .text{
+        color: white;
+        margin-top: 2rem;
+    }
+}

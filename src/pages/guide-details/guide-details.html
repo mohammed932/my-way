@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>دليل صعوبات التعلم</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-row class="doctor-wrapper">
+    <ion-col col-6>
+      <div class="doctor-name">{{guideDetails.writer}}</div>
+    </ion-col>
+    <ion-col align-self-center>
+      <div text-left class="event-date">{{generalService.formatDate(guideDetails.created_at)}}</div>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-grid>
+    <ion-row>
+      <div class="content-title">{{guideDetails.title}}</div>
+    </ion-row>
+
+    <ion-row>
+      <div class="content-txt">
+        {{guideDetails.about}}
+      </div>
+    </ion-row>
+
+
+  </ion-grid>
+
+
+  <ion-row>
+    <img src="assets/imgs/pdf.svg" class="pdf-img" (click)="openFile(guideDetails.theFile)">
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>لقاءات التربية الخاصة</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="my-content">
+  <loading-spinner *ngIf="displayLoading"></loading-spinner>
+  <div *ngIf="!displayLoading">
+    <ion-row class="ad-row" *ngFor="let ad of Ads" (click)="openPage(ad)">
+      <ion-col col-3 no-padding>
+        <img [src]="ad.img" class="ad-img">
+        <!-- <div class="ad-img"></div> -->
+      </ion-col>
+      <ion-col col-7 no-padding>
+        <div class="ad-title">{{ad.title}}</div>
+        <div class="ad-type">{{ad.type}}</div>
+      </ion-col>
+
+      <ion-col col-2 align-self-center no-padding>
+        <img src="assets/imgs/back.svg" class="back-img">
+      </ion-col>
+
+      <ion-col col-12 no-padding>
+        <hr class="hr-seperator">
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingText="تحميل المزيد من النتائج"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

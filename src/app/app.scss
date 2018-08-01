@@ -14,3 +14,49 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+
+.toolbar-ios{
+    min-height: 65px !important;
+}
+
+.toolbar-background-ios{
+    background: #13344f !important;
+}
+
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+    border-style: none !important;
+}
+
+
+.my-content{
+    background-image: url('../assets/imgs/bg.png');
+    background-size: 100% 100%;
+}
+
+.toolbar-title-ios{
+    color: white;
+}
+
+.ion-ios-arrow-back:before{
+    content: "\f3cf";
+    color: white;
+    font-size: 43px;
+    margin-right: 4px;
+}
+
+.spinner-ios-ios line, .spinner-ios-ios-small line{
+    stroke: white !important;
+}
+
+input.text-input.text-input-ios{
+    padding-right: 5px;
+}
+textarea.text-input.text-input-ios{
+    padding-right: 5px; 
+}

@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>لقاءات التربية الخاصة</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="my-content">
+  <ion-row>
+    <!-- <div class="ad-img"></div> -->
+    <img [src]="adDetails.img" class="ad-img">
+  </ion-row>
+
+  <div class="ad-title">{{adDetails.title}}</div>
+  <div class="ad-type">{{adDetails.type}}</div>
+
+  <ion-row>
+    <div class="text">{{adDetails.about}}</div>
+  </ion-row>
+</ion-content>

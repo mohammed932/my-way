@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>فريق العمل</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="my-content">
+
+  <loading-spinner *ngIf="displayLoading"></loading-spinner>
+  <div *ngIf="!displayLoading">
+    <ion-item *ngFor="let team of Teams">
+      <div class="img-wrapper">
+        <img src="assets/imgs/profile.svg" class="icon-img">
+      </div>
+      <div class="postion">{{team.name}}</div>
+      <div class="item-title">{{team.about}}</div>
+      <div class="email-wrapper">
+        <ion-row class="envelope-row">
+          <ion-col col-2 no-padding> </ion-col>
+          <ion-col col-10 no-padding>
+            <ion-row>
+              <ion-col col-2 align-self-center>
+                <img src="assets/imgs/envelope.svg" class="envelope-img">
+              </ion-col>
+              <ion-col col-10>
+                <div class="email">{{team.email}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+      <img src="assets/imgs/back.svg" class="back-img">
+    </ion-item>
+  </div>
+
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingText="تحميل المزيد من النتائج"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

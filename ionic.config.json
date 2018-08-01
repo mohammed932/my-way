@@ -1,6 +1,8 @@
 {
   "name": "t3lim",
-  "app_id": "1efd2172",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
-  "integrations": {}
+  "pro_id": "1efd2172"
 }

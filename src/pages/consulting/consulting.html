@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>إستشارات</ion-title>
+    <img src="assets/imgs/plus-button.svg" class="plus-icon" (click)="add()">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="my-content">
+
+  <loading-spinner *ngIf="displayLoading"></loading-spinner>
+  <div *ngIf="!displayLoading">
+    <ion-item *ngFor="let cons of Consults" (click)="openPage(cons)">
+      <div class="img-wrapper">
+        <img src="assets/imgs/profile.svg" class="icon-img">
+      </div>
+      <div class="postion">{{cons.name}}</div>
+      <div class="item-title">{{cons.degree}}</div>
+
+      <img src="assets/imgs/back.svg" class="back-img" (click)="add()">
+    </ion-item>
+  </div>
+
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingText="تحميل المزيد من النتائج"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
